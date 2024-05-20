@@ -1,12 +1,8 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { injectIntl, intlShape } from '@edx/frontend-platform/i18n';
+import { injectIntl } from '@edx/frontend-platform/i18n';
 import { sendTrackEvent } from '@edx/frontend-platform/analytics';
 import { ensureConfig } from '@edx/frontend-platform/config';
 import { AppContext } from '@edx/frontend-platform/react';
-
-import messages from './Footer.messages';
-import LanguageSelector from './LanguageSelector';
 
 ensureConfig([
   'LMS_BASE_URL',
@@ -34,13 +30,6 @@ class SiteFooter extends React.Component {
   }
 
   render() {
-    const {
-      supportedLanguages,
-      onLanguageSelected,
-      logo,
-      intl,
-    } = this.props;
-    const showLanguageSelector = supportedLanguages.length > 0 && onLanguageSelected;
     const { config } = this.context;
 
     return (
@@ -48,8 +37,8 @@ class SiteFooter extends React.Component {
         role="contentinfo"
         className="footer d-flex border-top py-3 px-4"
       >
-        <div className="container-fluid d-flex">
-          <a
+        <div className="container-fluid d-flex content-container">
+          {/* <a
             className="d-block"
             href={config.LMS_BASE_URL}
             aria-label={intl.formatMessage(messages['footer.logo.ariaLabel'])}
@@ -66,7 +55,47 @@ class SiteFooter extends React.Component {
               options={supportedLanguages}
               onSubmit={onLanguageSelected}
             />
-          )}
+          )} */}
+          <div className="powered-area">
+            <div>
+              <a href="https://www.hdruk.ac.uk/" rel="noreferrer" target="_blank">
+                <img src="https://www.hdruk.ac.uk/wp-content/themes/hdruk/assets/img/logo.svg" alt="" width="70" />
+              </a>
+            </div>
+            <div>Powered by:</div>
+            <div>
+              <a href="https://docs.tutor.edly.io" rel="noreferrer" target="_blank">
+                <img src={`${config.LMS_BASE_URL}/static/hdrukfuturestheme/images/tutor-logo.png`} alt="Runs on Tutor" width="57" />
+              </a>
+            </div>
+            <div>
+              <a href="https://openedx.org/" rel="noreferrer" target="_blank">
+                <img src={`${config.LMS_BASE_URL}/static/hdrukfuturestheme/images/openedx-logo.png`} alt="" width="79" />
+              </a>
+            </div>
+            <div>
+              <a href="https://evt.digital" rel="noreferrer" target="_blank">
+                <img src={`${config.LMS_BASE_URL}/static/hdrukfuturestheme/images/evt-logo.png`} alt="" width="65" />
+              </a>
+            </div>
+          </div>
+
+          <nav className="nav-colophon" aria-label="About">
+            <ol>
+              <li>
+                <a href="/about">About Us</a>
+              </li>
+              <li>
+                <a href="/tos">Terms of Sevice</a>
+              </li>
+              <li>
+                <a href="/privacy">Privacy Policy</a>
+              </li>
+              <li>
+                <a href="/help">Help</a>
+              </li>
+            </ol>
+          </nav>
         </div>
       </footer>
     );
@@ -74,16 +103,6 @@ class SiteFooter extends React.Component {
 }
 
 SiteFooter.contextType = AppContext;
-
-SiteFooter.propTypes = {
-  intl: intlShape.isRequired,
-  logo: PropTypes.string,
-  onLanguageSelected: PropTypes.func,
-  supportedLanguages: PropTypes.arrayOf(PropTypes.shape({
-    label: PropTypes.string.isRequired,
-    value: PropTypes.string.isRequired,
-  })),
-};
 
 SiteFooter.defaultProps = {
   logo: undefined,
