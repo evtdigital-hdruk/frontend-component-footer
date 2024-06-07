@@ -88,13 +88,13 @@ var SiteFooter = /*#__PURE__*/function (_React$Component) {
         className: "nav-colophon",
         "aria-label": "About"
       }, /*#__PURE__*/React.createElement("ol", null, /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
-        href: "/about"
+        href: "".concat(config.LMS_BASE_URL, "/about")
       }, "About Us")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
-        href: "/tos"
+        href: "".concat(config.LMS_BASE_URL, "/tos")
       }, "Terms of Sevice")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
-        href: "/privacy"
+        href: "".concat(config.LMS_BASE_URL, "/privacy")
       }, "Privacy Policy")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
-        href: "/help"
+        href: "".concat(config.LMS_BASE_URL, "/help")
       }, "Help"))))));
     }
   }]);
