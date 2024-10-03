@@ -58,23 +58,23 @@ class SiteFooter extends React.Component {
           )} */}
           <div className="powered-area">
             <div>
-              <a href="https://www.hdruk.ac.uk/" rel="noreferrer" target="_blank">
+              <a href="https://www.hdruk.ac.uk/" rel="noreferrer" target="_blank" aria-label="Visit the HDR UK website">
                 <img src="https://www.hdruk.ac.uk/wp-content/themes/hdruk/assets/img/logo.svg" alt="" width="70" />
               </a>
             </div>
             <div>Powered by:</div>
             <div>
-              <a href="https://docs.tutor.edly.io" rel="noreferrer" target="_blank">
+              <a href="https://docs.tutor.edly.io" rel="noreferrer" target="_blank" aria-label="Visit the Edly Tutor website">
                 <img src={`${config.LMS_BASE_URL}/static/hdrukfuturestheme/images/tutor-logo.png`} alt="Runs on Tutor" width="57" />
               </a>
             </div>
             <div>
-              <a href="https://openedx.org/" rel="noreferrer" target="_blank">
+              <a href="https://openedx.org/" rel="noreferrer" target="_blank" aria-label="Visit the Open edX website">
                 <img src={`${config.LMS_BASE_URL}/static/hdrukfuturestheme/images/openedx-logo.png`} alt="" width="79" />
               </a>
             </div>
             <div>
-              <a href="https://evt.digital" rel="noreferrer" target="_blank">
+              <a href="https://evt.digital" rel="noreferrer" target="_blank" aria-label="Visit the EVT Digital website">
                 <img src={`${config.LMS_BASE_URL}/static/hdrukfuturestheme/images/evt-logo.png`} alt="" width="65" />
               </a>
             </div>
@@ -83,16 +83,16 @@ class SiteFooter extends React.Component {
           <nav className="nav-colophon" aria-label="About">
             <ol>
               <li>
-                <a href={`${config.LMS_BASE_URL}/about`}>About Us</a>
+                <a href={`${config.MARKETING_SITE_BASE_URL}/about-us`}>About Us</a>
               </li>
               <li>
-                <a href={`${config.LMS_BASE_URL}/tos`}>Terms of Sevice</a>
+                <a href={`${config.MARKETING_SITE_BASE_URL}/terms-of-service`}>Terms of Sevice</a>
               </li>
               <li>
-                <a href={`${config.LMS_BASE_URL}/privacy`}>Privacy Policy</a>
+                <a href={`${config.MARKETING_SITE_BASE_URL}/privacy-policy`}>Privacy Policy</a>
               </li>
               <li>
-                <a href={`${config.LMS_BASE_URL}/help`}>Help</a>
+                <a href={`${config.MARKETING_SITE_BASE_URL}/help`}>Help</a>
               </li>
             </ol>
           </nav>
