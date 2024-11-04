@@ -14,7 +14,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 import React from 'react';
 import { injectIntl } from '@edx/frontend-platform/i18n';
 import { sendTrackEvent } from '@edx/frontend-platform/analytics';
-import { ensureConfig } from '@edx/frontend-platform/config';
+import { ensureConfig } from '@edx/frontend-platform';
 import { AppContext } from '@edx/frontend-platform/react';
 ensureConfig(['LMS_BASE_URL', 'LOGO_TRADEMARK_URL'], 'Footer component');
 var EVENT_NAMES = {
@@ -55,7 +55,8 @@ var SiteFooter = /*#__PURE__*/function (_React$Component) {
       }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("a", {
         href: "https://www.hdruk.ac.uk/",
         rel: "noreferrer",
-        target: "_blank"
+        target: "_blank",
+        "aria-label": "Visit the HDR UK website"
       }, /*#__PURE__*/React.createElement("img", {
         src: "https://www.hdruk.ac.uk/wp-content/themes/hdruk/assets/img/logo.svg",
         alt: "",
@@ -63,7 +64,8 @@ var SiteFooter = /*#__PURE__*/function (_React$Component) {
       }))), /*#__PURE__*/React.createElement("div", null, "Powered by:"), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("a", {
         href: "https://docs.tutor.edly.io",
         rel: "noreferrer",
-        target: "_blank"
+        target: "_blank",
+        "aria-label": "Visit the Edly Tutor website"
       }, /*#__PURE__*/React.createElement("img", {
         src: "".concat(config.LMS_BASE_URL, "/static/hdrukfuturestheme/images/tutor-logo.png"),
         alt: "Runs on Tutor",
@@ -71,7 +73,8 @@ var SiteFooter = /*#__PURE__*/function (_React$Component) {
       }))), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("a", {
         href: "https://openedx.org/",
         rel: "noreferrer",
-        target: "_blank"
+        target: "_blank",
+        "aria-label": "Visit the Open edX website"
       }, /*#__PURE__*/React.createElement("img", {
         src: "".concat(config.LMS_BASE_URL, "/static/hdrukfuturestheme/images/openedx-logo.png"),
         alt: "",
@@ -79,7 +82,8 @@ var SiteFooter = /*#__PURE__*/function (_React$Component) {
       }))), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("a", {
         href: "https://evt.digital",
         rel: "noreferrer",
-        target: "_blank"
+        target: "_blank",
+        "aria-label": "Visit the EVT Digital website"
       }, /*#__PURE__*/React.createElement("img", {
         src: "".concat(config.LMS_BASE_URL, "/static/hdrukfuturestheme/images/evt-logo.png"),
         alt: "",
@@ -88,13 +92,13 @@ var SiteFooter = /*#__PURE__*/function (_React$Component) {
         className: "nav-colophon",
         "aria-label": "About"
       }, /*#__PURE__*/React.createElement("ol", null, /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
-        href: "".concat(config.LMS_BASE_URL, "/about")
+        href: "".concat(config.MARKETING_SITE_BASE_URL, "/about-us")
       }, "About Us")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
-        href: "".concat(config.LMS_BASE_URL, "/tos")
+        href: "".concat(config.MARKETING_SITE_BASE_URL, "/terms-of-service")
       }, "Terms of Sevice")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
-        href: "".concat(config.LMS_BASE_URL, "/privacy")
+        href: "".concat(config.MARKETING_SITE_BASE_URL, "/privacy-policy")
       }, "Privacy Policy")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
-        href: "".concat(config.LMS_BASE_URL, "/help")
+        href: "".concat(config.MARKETING_SITE_BASE_URL, "/help")
       }, "Help"))))));
     }
   }]);

@@ -40,6 +40,7 @@ var LanguageSelector = function LanguageSelector(_ref) {
       value: value
     }, label);
   })), /*#__PURE__*/React.createElement("button", {
+    "data-testid": "site-footer-submit-btn",
     className: "btn btn-outline-primary btn-sm",
     type: "submit"
   }, /*#__PURE__*/React.createElement(FormattedMessage, {
