@@ -4,6 +4,8 @@ import { sendTrackEvent } from '@edx/frontend-platform/analytics';
 import { ensureConfig } from '@edx/frontend-platform';
 import { AppContext } from '@edx/frontend-platform/react';
 
+import '../_footer.scss';
+
 ensureConfig([
   'LMS_BASE_URL',
   'LOGO_TRADEMARK_URL',
