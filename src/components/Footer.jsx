@@ -1,8 +1,10 @@
 import React from 'react';
 import { injectIntl } from '@edx/frontend-platform/i18n';
 import { sendTrackEvent } from '@edx/frontend-platform/analytics';
-import { ensureConfig } from '@edx/frontend-platform/config';
+import { ensureConfig } from '@edx/frontend-platform';
 import { AppContext } from '@edx/frontend-platform/react';
+
+import '../_footer.scss';
 
 ensureConfig([
   'LMS_BASE_URL',
